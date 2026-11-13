@@ -36,7 +36,7 @@ export default function App() {
 
   // Handlers
   const handleSplashFinish = () => {
-    setCurrentScreen('login');
+    setCurrentScreen('main');
   };
 
   const handleLoginSuccess = (user) => {
@@ -134,10 +134,6 @@ export default function App() {
 
         {currentScreen === 'splash' && (
           <SplashScreen onFinish={handleSplashFinish} />
-        )}
-
-        {currentScreen === 'login' && (
-          <LoginScreen onLoginSuccess={handleLoginSuccess} />
         )}
 
         {currentScreen === 'main' && (
